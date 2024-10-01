@@ -1,0 +1,262 @@
+import 'package:flutter/material.dart';
+
+class LoginView extends StatefulWidget 
+{
+  const LoginView({super.key});
+
+  @override
+  LoginViewState createState() => LoginViewState();
+}
+
+class LoginViewState extends State<LoginView> 
+{
+  String _password = '';
+  final TextEditingController _controller = TextEditingController();
+
+  void _addNumber(String number) 
+  {
+    setState (() 
+    {
+      _password += number;
+      _controller.text = _password;
+    });
+  }
+
+  void _clean() 
+  {
+    setState(() 
+    {
+      _password = '';
+      _controller.clear();
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) 
+  {
+    return Scaffold
+    (
+      backgroundColor: const Color.fromRGBO(255, 218, 133, 1.0),
+      body: Center
+      (
+        child: Column
+        (
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: 
+          [
+            SizedBox
+            (
+              width: 400,
+              child:
+              TextField
+              (
+                controller: _controller,
+                decoration: InputDecoration
+                (
+                  border: OutlineInputBorder
+                  (
+                    borderRadius: BorderRadius.circular(50)
+                  ),
+                  labelText: 'Senha',
+                  labelStyle: const TextStyle
+                  (
+                    color: Color.fromRGBO(140, 82, 255, 1.0),
+                  ),
+                  fillColor: const Color.fromARGB(255, 255, 241, 221),
+                  filled: true
+                ),
+              ),
+            ),
+            const Padding(padding: EdgeInsets.all(20)),
+
+            ElevatedButton
+            (
+              onPressed: () {},
+              child: const Text('Entrar'),
+            ),
+
+            const SizedBox(height: 20),
+
+              Column
+              (
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: 
+                [
+                  Row
+                  (
+                    children: 
+                    [
+                      Expanded
+                      (
+                        child: ElevatedButton
+                        (
+                          onPressed: () 
+                          {
+                          _addNumber('1');
+                          },
+                          child: const Text('1'),
+                        ),
+                      ),
+
+                      const SizedBox(width: 8),
+                      Expanded
+                      (
+                        child: ElevatedButton
+                        (
+                          onPressed: () 
+                          {
+                            _addNumber('2');
+                          },
+                          child: const Text('2'),
+                        ),
+                      ),
+
+                      const SizedBox(width: 8),
+
+                      Expanded
+                      (
+                        child: ElevatedButton
+                        (
+                          onPressed: () 
+                          {
+                            _addNumber('3');
+                          },
+                          child: const Text('3'),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(height: 8),
+                  Row
+                  (
+                    children: 
+                    [
+                      Expanded
+                      (
+                        child: ElevatedButton
+                        (
+                          onPressed: () 
+                          {
+                            _addNumber('4');
+                          },
+                          child: const Text('4'),
+                        ),
+                      ),
+
+                      const SizedBox(width: 8),
+                      Expanded
+                      (
+                        child: ElevatedButton
+                        (
+                          onPressed: () 
+                          {
+                            _addNumber('5');
+                          },
+                          child: const Text('5'),
+                        ),
+                      ),
+
+                      const SizedBox(width: 8),
+                      Expanded
+                      (
+                        child: ElevatedButton
+                        (
+                          onPressed: () 
+                          {
+                            _addNumber('6');
+                          },
+                          child: const Text('6'),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(height: 8),
+                  Row
+                  (
+                    children: 
+                    [
+                      Expanded
+                      (
+                        child: ElevatedButton
+                        (
+                          onPressed: () 
+                          {
+                            _addNumber('7');
+                          },
+                          child: const Text('7'),
+                        ),
+                      ),
+
+                      const SizedBox(width: 8),
+
+                      Expanded
+                      (
+                        child: ElevatedButton
+                        (
+                          onPressed: () 
+                          {
+                            _addNumber('8');
+                          },
+                          child: const Text('8'),
+                        ),
+                      ),
+
+                      const SizedBox(width: 8),
+
+                      Expanded
+                      (
+                        child: ElevatedButton
+                        (
+                          onPressed: () 
+                          {
+                            _addNumber('9');
+                          },
+                          child: const Text('9'),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(height: 8),
+
+                  Row
+                  (
+                    children: 
+                    [
+                      Expanded
+                      (
+                        child: ElevatedButton
+                        (
+                          onPressed: () 
+                          {
+                            _addNumber('0');
+                          },
+                          child: const Text('0'),
+                        ),
+                      ),
+                      
+                      const SizedBox(width: 8),
+
+                      Expanded
+                      (
+                        child: ElevatedButton
+                        (
+                          onPressed: ()
+                          {
+                            _clean();
+                          },
+                          child: const Text('Limpar'),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
