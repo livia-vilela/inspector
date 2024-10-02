@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "53520677791",
+    "firebase_url": "https://inspector-f0183-default-rtdb.firebaseio.com",
+    "project_id": "inspector-f0183",
+    "storage_bucket": "inspector-f0183.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53520677791:android:4ff39b1f29dc71095bdbaa",
+        "android_client_info": {
+          "package_name": "com.exampl"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6oBvwVZBrn6VzwkgauV3P1FUYg0efHgU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
