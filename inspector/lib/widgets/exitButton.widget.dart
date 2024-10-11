@@ -4,7 +4,16 @@ import 'package:inspector/graphic.view.dart';
 
 class ExitButton extends StatelessWidget 
 {
-  const ExitButton({super.key});
+   final int correctCount;
+  final int errorCount;
+  final int totalInlays;
+
+  const ExitButton({
+    super.key,
+    required this.correctCount,
+    required this.errorCount,
+    required this.totalInlays,
+  });
 
   @override
   Widget build(BuildContext context) 
@@ -25,7 +34,12 @@ class ExitButton extends StatelessWidget
             Navigator.push
             (
               context,
-              MaterialPageRoute(builder: (context) => const GraphicView())
+              MaterialPageRoute(builder: (context) => GraphicView
+              (
+                correctCount: correctCount,
+                errorCount: errorCount,
+                totalInlays: totalInlays,
+              ))
             );
           },
           style: ElevatedButton.styleFrom
